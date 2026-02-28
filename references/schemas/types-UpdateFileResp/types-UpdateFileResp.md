@@ -1,0 +1,4 @@
+# types.UpdateFileResp
+
+**Type:** object
+

@@ -1,0 +1,4 @@
+# types.APIUnauthorized
+
+**Type:** object
+

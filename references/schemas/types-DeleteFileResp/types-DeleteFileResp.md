@@ -1,0 +1,4 @@
+# types.DeleteFileResp
+
+**Type:** object
+

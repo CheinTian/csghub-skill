@@ -1,0 +1,11 @@
+# types.CreateSpaceSdkReq
+
+**Type:** object
+
+## Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `name` | string | Yes |  |
+| `version` | string | Yes |  |
+

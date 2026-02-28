@@ -1,0 +1,4 @@
+# types.APIInternalServerError
+
+**Type:** object
+

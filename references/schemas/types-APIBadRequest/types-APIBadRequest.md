@@ -1,0 +1,4 @@
+# types.APIBadRequest
+
+**Type:** object
+

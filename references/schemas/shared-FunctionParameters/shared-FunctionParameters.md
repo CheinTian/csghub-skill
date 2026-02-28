@@ -1,0 +1,4 @@
+# shared.FunctionParameters
+
+**Type:** object
+

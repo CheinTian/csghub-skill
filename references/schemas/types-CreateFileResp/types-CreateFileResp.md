@@ -1,0 +1,4 @@
+# types.CreateFileResp
+
+**Type:** object
+

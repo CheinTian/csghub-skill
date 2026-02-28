@@ -1,0 +1,28 @@
+# PUT /user/{username}/likes/{repoid}
+
+**Resource:** [User](../resources/User.md)
+**Add user likes**
+**Operation ID:** `put--user-{username}-likes-{repoid}`
+
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `username` | path | string | Yes | username |
+| `repo_id` | path | string | Yes | repo id |
+
+## Responses
+
+| Status | Description |
+|--------|-------------|
+| 200 | OK |
+| 400 | Bad request |
+| 500 | Internal server error |
+
+**Success Response Schema:**
+
+[types.Response](../schemas/types-Response/types-Response.md)
+
+## Security
+
+- **ApiKey**

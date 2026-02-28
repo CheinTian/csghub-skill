@@ -1,246 +1,92 @@
 ---
-name: csghub
-description: Interact with CSGHub platform - manage models, datasets, codes, spaces, MCPs, agents, and more. Use when: (1) working with CSGHub API operations, (2) managing AI resources on CSGHub, (3) deploying models or spaces, (4) querying user resources, (5) any CSGHub platform interaction.
+name: csghub-server-api
+description: CSGHub Server API.. Use when working with the CSGHub Server API or when the user needs to interact with this API.
+metadata:
+  api-version: "1.0"
+  openapi-version: "3.0.1"
 ---
 
-# CSGHub Skill
+# CSGHub Server API
 
-CSGHub is an open-source large model assets platform for managing, sharing, and deploying AI resources including models, datasets, code repositories, and AI applications.
+CSGHub Server API.
+
+## How to Use This Skill
+
+This API documentation is split into multiple files for on-demand loading.
+
+**Directory structure:**
+```
+references/
+├── resources/      # 51 resource index files
+├── operations/     # 509 operation detail files
+└── schemas/        # 441 schema groups, 443 schema files
+```
+
+**Navigation flow:**
+1. Find the resource you need in the list below
+2. Read `references/resources/<resource>.md` to see available operations
+3. Read `references/operations/<operation>.md` for full details
+4. If an operation references a schema, read `references/schemas/<prefix>/<schema>.md`
+
+## Base URL
+
+- `http://opencsg-stg.com/api/v1`
+- `https://opencsg-stg.com/api/v1`
 
 ## Authentication
 
-CSGHub API uses Bearer Token authentication via the `Authorization` header.
-
-```bash
-export CSGHUB_TOKEN="your-api-token"
-export CSGHUB_URL="https://hub.opencsg-stg.com/api/v1"
-```
-
-## Quick Start
-
-```bash
-# Set environment variables
-export CSGHUB_TOKEN="your-token"
-export CSGHUB_URL="https://hub.opencsg-stg.com/api/v1"
-
-# List models
-curl -H "Authorization: ${CSGHUB_TOKEN}" \
-  "${CSGHUB_URL}/models"
-
-# Get model details
-curl -H "Authorization: ${CSGHUB_TOKEN}" \
-  "${CSGHUB_URL}/models/namespace/model-name"
-```
-
-## Resource Types
-
-| Resource | Description | Key Endpoints |
-|----------|-------------|---------------|
-| **models** | ML models, checkpoints, weights | `/models`, `/models/{namespace}/{name}` |
-| **datasets** | Training datasets, evaluation data | `/datasets`, `/datasets/{namespace}/{name}` |
-| **codes** | Code repositories, projects | `/codes`, `/codes/{namespace}/{name}` |
-| **spaces** | AI applications, demos | `/spaces`, `/spaces/{namespace}/{name}` |
-| **mcps** | Model Context Protocol servers | `/mcps`, `/mcps/{namespace}/{name}` |
-| **agent** | AI agents and templates | `/agent/*` |
-| **collections** | Curated resource collections | `/collections`, `/collections/{id}` |
-
-## Common Operations
-
-### List Resources
-
-```bash
-# List all models (paginated)
-GET /models?page=1&per=20
-
-# List user's models
-GET /user/{username}/models
-
-# List organization's models
-GET /organization/{namespace}/models
-```
-
-### Get Resource Details
-
-```bash
-GET /{repo_type}/{namespace}/{name}
-# repo_type: models | datasets | codes | spaces | mcps
-```
-
-### Repository Operations
-
-```bash
-# Get file tree
-GET /{repo_type}/{namespace}/{name}/tree
-
-# Get file content (blob)
-GET /{repo_type}/{namespace}/{name}/blob/{file_path}
-
-# Download file
-GET /{repo_type}/{namespace}/{name}/download/{file_path}
-
-# Get commits
-GET /{repo_type}/{namespace}/{name}/commits
-
-# Get branches
-GET /{repo_type}/{namespace}/{name}/branches
-
-# Get last commit
-GET /{repo_type}/{namespace}/{name}/last_commit
-```
-
-### Model Operations
-
-```bash
-# Create model inference endpoint (serverless)
-POST /models/{namespace}/{name}/serverless
-
-# Get inference logs
-GET /models/{namespace}/{name}/serverless/{id}/logs/{instance}
-
-# Start/stop inference
-PUT /models/{namespace}/{name}/serverless/{id}/start
-PUT /models/{namespace}/{name}/serverless/{id}/stop
-
-# List model relations (datasets used, etc.)
-GET /models/{namespace}/{name}/relations
-```
-
-### Space Operations
-
-```bash
-# Deploy space
-POST /spaces/{namespace}/{name}/run
-
-# Get space status
-GET /spaces/{namespace}/{name}/status
-
-# Get space logs
-GET /spaces/{namespace}/{name}/logs
-
-# Stop/wake up space
-PUT /spaces/{namespace}/{name}/stop
-PUT /spaces/{namespace}/{name}/wakeup
-```
-
-### Dataset Operations
-
-```bash
-# Get data viewer catalog
-GET /datasets/{namespace}/{name}/dataviewer/catalog
-
-# Get dataset rows
-GET /datasets/{namespace}/{name}/dataviewer/rows
-
-# Preview file
-GET /datasets/{namespace}/{name}/viewer/{file_path}
-```
-
-### User Operations
-
-```bash
-# Get current user
-GET /user/{id}
-
-# Get user by username
-GET /user/{username}
-
-# List user tokens
-GET /user/{username}/tokens
-
-# Manage SSH keys
-GET /user/{username}/ssh_keys
-POST /user/{username}/ssh_keys
-DELETE /user/{username}/ssh_key/{name}
-```
-
-### Finetune Operations
-
-```bash
-# Create finetune job
-POST /models/{namespace}/{name}/finetune
-
-# Get finetune job
-GET /models/{namespace}/{name}/finetune/{id}
-
-# Get finetune logs
-GET /models/{namespace}/{name}/finetune/{id}/logs/{instance}
-
-# Start/stop finetune
-PUT /models/{namespace}/{name}/finetune/{id}/start
-PUT /models/{namespace}/{name}/finetune/{id}/stop
-```
-
-### Accounting Operations
-
-```bash
-# Get balance
-GET /accounting/credit/{id}/balance
-
-# List bills
-GET /accounting/credit/{id}/bills?start_date=2024-01-01&end_date=2024-12-31
-
-# List statements
-GET /accounting/credit/{id}/statements
-```
-
-## CLI Tool
-
-Use the included Python CLI for convenient operations:
-
-```bash
-# Set credentials
-export CSGHUB_TOKEN="your-token"
-export CSGHUB_URL="https://hub.opencsg-stg.com/api/v1"
-
-# List models
-python scripts/csghub-cli.py list models
-
-# Get model details
-python scripts/csghub-cli.py get model namespace/name
-
-# List datasets
-python scripts/csghub-cli.py list datasets
-
-# List spaces
-python scripts/csghub-cli.py list spaces
-
-# List current user's resources
-python scripts/csghub-cli.py list my-models
-```
-
-## API Specification
-
-For complete API details including all endpoints, parameters, and response schemas, see [references/api-spec.md](references/api-spec.md).
-
-## Error Handling
-
-Common error codes:
-
-| Code | Meaning |
-|------|---------|
-| 400 | Bad request - invalid parameters |
-| 401 | Unauthorized - invalid or missing token |
-| 403 | Forbidden - insufficient permissions |
-| 404 | Not found - resource doesn't exist |
-| 500 | Internal server error |
-
-Error response format:
-```json
-{
-  "code": 400,
-  "msg": "error message",
-  "data": null
-}
-```
-
-## Rate Limiting
-
-Some endpoints may have rate limits. Check response headers:
-- `X-RateLimit-Limit`
-- `X-RateLimit-Remaining`
-- `X-RateLimit-Reset`
-
-## References
-
-- [API Specification](references/api-spec.md) - Complete endpoint documentation
-- [CSGHub CLI](scripts/csghub-cli.py) - Python CLI tool for common operations
+Supported methods: **ApiKey**. See `references/authentication.md` for details.
+
+## Resources
+
+- **Agent** → `references/resources/Agent.md` (52 ops)
+- **Repository** → `references/resources/Repository.md` (48 ops)
+- **User** → `references/resources/User.md` (45 ops)
+- **Model** → `references/resources/Model.md` (37 ops)
+- **Accounting** → `references/resources/Accounting.md` (35 ops)
+- **Prompt** → `references/resources/Prompt.md` (26 ops)
+- **Mirror** → `references/resources/Mirror.md` (17 ops)
+- **Accounting-Invoices** → `references/resources/Accounting-Invoices.md` (15 ops)
+- **Cluster** → `references/resources/Cluster.md` (13 ops)
+- **RuntimeFramework** → `references/resources/RuntimeFramework.md` (13 ops)
+- **Organization** → `references/resources/Organization.md` (12 ops)
+- **Space** → `references/resources/Space.md` (11 ops)
+- **LLMService** → `references/resources/LLMService.md` (10 ops)
+- **Notifications** → `references/resources/Notifications.md` (10 ops)
+- **Discussion** → `references/resources/Discussion.md` (9 ops)
+- **Dataset** → `references/resources/Dataset.md` (9 ops)
+- **Notebook** → `references/resources/Notebook.md` (9 ops)
+- **Tag** → `references/resources/Tag.md` (9 ops)
+- **Collection** → `references/resources/Collection.md` (8 ops)
+- **License** → `references/resources/License.md` (8 ops)
+- **Access token** → `references/resources/Access-token.md` (8 ops)
+- **MCP** → `references/resources/MCP.md` (7 ops)
+- **Code** → `references/resources/Code.md` (6 ops)
+- **Skill** → `references/resources/Skill.md` (6 ops)
+- **Monitor** → `references/resources/Monitor.md` (6 ops)
+- **ApiRateLimit** → `references/resources/ApiRateLimit.md` (5 ops)
+- **Broadcasts** → `references/resources/Broadcasts.md` (5 ops)
+- **Member** → `references/resources/Member.md` (5 ops)
+- **SpaceTemplate** → `references/resources/SpaceTemplate.md` (5 ops)
+- **AIGateway** → `references/resources/AIGateway.md` (5 ops)
+- **Moderation** → `references/resources/Moderation.md` (4 ops)
+- **StorageGateway** → `references/resources/StorageGateway.md` (4 ops)
+- **Finetune** → `references/resources/Finetune.md` (4 ops)
+- **SpaceReource** → `references/resources/SpaceReource.md` (4 ops)
+- **SpaceSdk** → `references/resources/SpaceSdk.md` (4 ops)
+- **Evaluation** → `references/resources/Evaluation.md` (3 ops)
+- **Import** → `references/resources/Import.md` (3 ops)
+- **Invitations** → `references/resources/Invitations.md` (3 ops)
+- **List** → `references/resources/List.md` (3 ops)
+- **OrganizationVerify** → `references/resources/OrganizationVerify.md` (3 ops)
+- **Sync** → `references/resources/Sync.md` (3 ops)
+- **UserVerify** → `references/resources/UserVerify.md` (3 ops)
+- **SSH Key** → `references/resources/SSH-Key.md` (3 ops)
+- **Captcha** → `references/resources/Captcha.md` (2 ops)
+- **JWT** → `references/resources/JWT.md` (2 ops)
+- **Stat** → `references/resources/Stat.md` (2 ops)
+- **Events** → `references/resources/Events.md` (1 ops)
+- **Namespace** → `references/resources/Namespace.md` (1 ops)
+- **InternalOnly** → `references/resources/InternalOnly.md` (1 ops)
+- **Recommendation** → `references/resources/Recommendation.md` (1 ops)
+- **Telemetry** → `references/resources/Telemetry.md` (1 ops)
