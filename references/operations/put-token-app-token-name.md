@@ -19,6 +19,7 @@
 |--------|-------------|
 | 200 | OK |
 | 400 | Bad request |
+| 404 | Access token not found |
 | 500 | Internal server error |
 
 **Success Response Schema:**

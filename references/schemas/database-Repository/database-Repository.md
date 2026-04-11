@@ -39,6 +39,7 @@
 | `source` | [types.RepositorySource](types-RepositorySource.md) | No |  |
 | `ssh_clone_url` | string | No |  |
 | `star_count` | integer | No |  |
+| `statistics` | database.RepositoryStatistics[] | No |  |
 | `sync_status` | object | No | Only used for multi-source sync status |
 | `tags` | database.Tag[] | No |  |
 | `updated_at` | string | No |  |

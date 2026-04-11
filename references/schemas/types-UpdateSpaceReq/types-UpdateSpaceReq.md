@@ -8,6 +8,7 @@
 |-------|------|----------|-------------|
 | `cluster_id` | string | No |  |
 | `cover_image_url` | string | No |  |
+| `default_branch` | string | No |  |
 | `description` | string | No | The new description for the repository |
 | `driver_version` | string | No |  |
 | `env` | string | No |  |

@@ -10,8 +10,9 @@
 |------|------|------|----------|-------------|
 | `start_time` | query | string | Yes | start_time, format: '2024-06-12 08:27:22' |
 | `end_time` | query | string | Yes | end_time, format: '2024-06-12 17:17:22' |
-| `user_uuid` | query | string | Yes | user uuid |
+| `user_uuid` | query | string | Yes | user or org uuid |
 | `session_status` | query | string | Yes | session status |
+| `org_name` | query | string | No | org name |
 | `per` | query | integer | No | per |
 | `page` | query | integer | No | per page |
 

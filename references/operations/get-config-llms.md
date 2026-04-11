@@ -14,6 +14,7 @@ Get LLMConfig in database. Return a list of LLM configurations with optional fil
 | `per` | query | integer | No | define the batch size to return in a single response |
 | `keyword` | query | string | No | search in model_name |
 | `type` | query | integer | No | search in type (e.g., 1: optimization, 2: comparison) |
+| `enabled` | query | boolean | No | search in enabled |
 
 ## Responses
 

@@ -9,6 +9,7 @@
 | Name | In | Type | Required | Description |
 |------|------|------|----------|-------------|
 | `id` | path | integer | Yes | id |
+| `org_name` | query | string | No | org_name |
 
 ## Responses
 

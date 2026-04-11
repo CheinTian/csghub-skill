@@ -10,6 +10,7 @@
 | `deploy_name` | string | No |  |
 | `min_replica` | integer | No |  |
 | `order_detail_id` | integer | No |  |
+| `owner_namespace` | string | No |  |
 | `resource_id` | integer | No |  |
 | `runtime_framework_id` | integer | No |  |
 

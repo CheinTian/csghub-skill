@@ -4,6 +4,7 @@
 
 | Method | Path | Summary | Details |
 |--------|------|---------|----------|
+| GET | `/organization/uuid/{uuid}/members/{username}` | Get user's role in an org by uuid and username | [View](../operations/get-organization-uuid-uuid-members-username.md) |
 | GET | `/organization/{namespace}/members` | Get organization members. Org member can get more details. | [View](../operations/get-organization-namespace-members.md) |
 | POST | `/organization/{namespace}/members` | Create new membership between org and user | [View](../operations/post-organization-namespace-members.md) |
 | GET | `/organization/{namespace}/members/{username}` | Get user's role in an org | [View](../operations/get-organization-namespace-members-username.md) |

@@ -10,11 +10,15 @@
 | `commit_files` | types.CommitFile[] | No | Files to commit |
 | `default_branch` | string | No | The default branch of the repository |
 | `description` | string | No | A description for the repository |
+| `git_password` | string | No | Git password for authentication |
+| `git_url` | string | No | Git repository URL for mirroring |
+| `git_username` | string | No | Git username for authentication |
 | `license` | string | No | The license for the repository |
 | `name` | string | No | The name of the repository |
 | `namespace` | string | No | The namespace of the repository, which can be a user or an organization |
 | `nickname` | string | No | The display name of the repository |
 | `private` | boolean | No | Whether the repository is private |
+| `skill_file` | string | No | Skill package SHA256 hash |
 | `star_count` | integer | No | Star count |
 | `tool_count` | integer | No | Tool count |
 | `type` | object | No | The type of the repository |

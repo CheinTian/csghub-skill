@@ -8,5 +8,6 @@
 |-------|------|----------|-------------|
 | `amount_total` | integer | Yes |  |
 | `cancel_url` | string | Yes |  |
+| `org_name` | string | No |  |
 | `success_url` | string | Yes |  |
 

@@ -10,4 +10,5 @@
 - `space`
 - `prompt`
 - `mcp`
+- `skill`
 - `unknown`

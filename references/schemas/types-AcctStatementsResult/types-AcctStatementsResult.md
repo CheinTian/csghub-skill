@@ -8,6 +8,8 @@
 |-------|------|----------|-------------|
 | `data` | types.AcctStatementsRes[] | No |  |
 | `total` | integer | No |  |
+| `total_completion_token` | number | No |  |
 | `total_consumption` | number | No |  |
+| `total_prompt_token` | number | No |  |
 | `total_value` | number | No |  |
 

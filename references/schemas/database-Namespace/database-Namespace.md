@@ -15,4 +15,5 @@
 | `updated_at` | string | No |  |
 | `user` | [database.User](database-User.md) | No |  |
 | `user_id` | integer | No |  |
+| `uuid` | string | No |  |
 

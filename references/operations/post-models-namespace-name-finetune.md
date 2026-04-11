@@ -14,7 +14,7 @@
 
 ## Request Body
 
-deploy setting of instance
+deploy setting of instance (owner_namespace optional: user or org to create under)
 
 **Required:** Yes
 

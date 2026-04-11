@@ -44,6 +44,7 @@
 | GET | `/user/{username}/prompts` | Get user prompts | [View](../operations/get-user-username-prompts.md) |
 | GET | `/user/{username}/run/serverless` | Get serverless deploys | [View](../operations/get-user-username-run-serverless.md) |
 | GET | `/user/{username}/run/{repo_type}` | Get user running deploys | [View](../operations/get-user-username-run-repo-type.md) |
+| GET | `/user/{username}/skills` | Get user skills | [View](../operations/get-user-username-skills.md) |
 | GET | `/user/{username}/spaces` | Get user spaces | [View](../operations/get-user-username-spaces.md) |
 | GET | `/users` | Get users info. Only Admin | [View](../operations/get-users.md) |
 | GET | `/users/by-uuids` | Find users by UUIDs | [View](../operations/get-users-by-uuids.md) |

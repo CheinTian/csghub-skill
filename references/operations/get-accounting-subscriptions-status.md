@@ -9,6 +9,7 @@
 | Name | In | Type | Required | Description |
 |------|------|------|----------|-------------|
 | `sku_type` | query | string | Yes | sku_type |
+| `user_uuid` | query | string | No | user uuid |
 
 ## Responses
 

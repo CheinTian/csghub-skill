@@ -14,7 +14,7 @@
 
 ## Request Body
 
-deploy setting of inference
+deploy setting of inference (owner_namespace optional: user or org to create inference under)
 
 **Required:** Yes
 

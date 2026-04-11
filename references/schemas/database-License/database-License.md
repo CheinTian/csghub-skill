@@ -13,6 +13,7 @@
 | `expire_time` | string | No |  |
 | `extra` | string | No |  |
 | `id` | integer | No |  |
+| `issuer` | string | No |  |
 | `key` | string | No |  |
 | `max_user` | integer | No |  |
 | `product` | string | No |  |

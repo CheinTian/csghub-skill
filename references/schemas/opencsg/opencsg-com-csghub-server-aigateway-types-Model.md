@@ -10,9 +10,10 @@
 | `endpoint` | string | No |  |
 | `id` | string | No |  |
 | `is_pinned` | boolean | No | whether the model is pinned |
+| `metadata` | object | No |  |
 | `object` | string | No |  |
+| `official_name` | string | No |  |
 | `owned_by` | string | No |  |
-| `public` | boolean | No | whether the model is public (false = private, true = public) |
 | `support_function_call` | boolean | No | whether the model supports function calling |
 | `task` | string | No | like text-generation, text-to-image etc |
 

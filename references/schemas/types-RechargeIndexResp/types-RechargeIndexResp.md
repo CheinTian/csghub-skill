@@ -11,8 +11,10 @@
 | `created_at` | string | No |  |
 | `currency` | string | No |  |
 | `description` | string | No |  |
+| `entity_type` | string | No |  |
 | `from_user_uuid` | string | No |  |
 | `order_no` | string | No |  |
+| `org_name` | string | No |  |
 | `payment_uuid` | string | No |  |
 | `recharge_payment_type` | string | No |  |
 | `succeeded` | boolean | No |  |

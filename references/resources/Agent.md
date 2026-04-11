@@ -28,6 +28,14 @@
 | PUT | `/agent/instances/{id}/sessions/{session_uuid}/histories/{msg_uuid}/feedback` | Update the feedback of a session history message | [View](../operations/put-agent-instances-id-sessions-session-uuid-histories-msg-uuid-feedback.md) |
 | PUT | `/agent/instances/{id}/sessions/{session_uuid}/histories/{msg_uuid}/rewrite` | Rewrite an output message | [View](../operations/put-agent-instances-id-sessions-session-uuid-histories-msg-uuid-rewrite.md) |
 | POST | `/agent/instances/{id}/sessions/{session_uuid}/share` | Share a session | [View](../operations/post-agent-instances-id-sessions-session-uuid-share.md) |
+| GET | `/agent/instances/{instance_id}/schedulers` | List agent schedulers for an instance | [View](../operations/get-agent-instances-instance-id-schedulers.md) |
+| POST | `/agent/instances/{instance_id}/schedulers` | Create agent scheduler | [View](../operations/post-agent-instances-instance-id-schedulers.md) |
+| GET | `/agent/instances/{instance_id}/schedulers/{scheduler_id}` | Get agent scheduler by ID | [View](../operations/get-agent-instances-instance-id-schedulers-scheduler-id.md) |
+| PUT | `/agent/instances/{instance_id}/schedulers/{scheduler_id}` | Update agent scheduler | [View](../operations/put-agent-instances-instance-id-schedulers-scheduler-id.md) |
+| DELETE | `/agent/instances/{instance_id}/schedulers/{scheduler_id}` | Delete agent scheduler | [View](../operations/delete-agent-instances-instance-id-schedulers-scheduler-id.md) |
+| POST | `/agent/instances/{instance_id}/schedulers/{scheduler_id}/execute` | Execute scheduler now | [View](../operations/post-agent-instances-instance-id-schedulers-scheduler-id-execute.md) |
+| GET | `/agent/instances/{instance_id}/tasks` | List scheduler tasks for an instance | [View](../operations/get-agent-instances-instance-id-tasks.md) |
+| PUT | `/agent/instances/{instance_id}/tasks/{task_id}` | Update scheduler task status | [View](../operations/put-agent-instances-instance-id-tasks-task-id.md) |
 | GET | `/agent/knowledge-bases` | List agent knowledge bases | [View](../operations/get-agent-knowledge-bases.md) |
 | POST | `/agent/knowledge-bases` | Create a new agent knowledge base | [View](../operations/post-agent-knowledge-bases.md) |
 | PUT | `/agent/knowledge-bases/content-id/{content_id}` | Update an agent knowledge base by ContentID | [View](../operations/put-agent-knowledge-bases-content-id-content-id.md) |
@@ -46,6 +54,7 @@
 | GET | `/agent/prompts` | List agent prompts | [View](../operations/get-agent-prompts.md) |
 | POST | `/agent/prompts/optimize` | Optimize agent prompt | [View](../operations/post-agent-prompts-optimize.md) |
 | GET | `/agent/shared/session` | Get shared session by share uuid | [View](../operations/get-agent-shared-session.md) |
+| GET | `/agent/skills` | List agent skills (platform + user-created) | [View](../operations/get-agent-skills.md) |
 | GET | `/agent/tasks` | List agent tasks | [View](../operations/get-agent-tasks.md) |
 | GET | `/agent/tasks/{id}` | Get agent task detail | [View](../operations/get-agent-tasks-id.md) |
 | GET | `/agent/templates` | List agent templates for the current user | [View](../operations/get-agent-templates.md) |

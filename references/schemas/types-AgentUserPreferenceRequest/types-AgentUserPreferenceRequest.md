@@ -8,5 +8,6 @@
 |-------|------|----------|-------------|
 | `entity_id` | string | Yes |  |
 | `entity_type` | enum: agent_instance, agent_knowledge_base, agent_template... | Yes |  |
-| `preference` | enum: pin | Yes |  |
+| `preference` | enum: pin, config-instance | Yes |  |
+| `value` | object | No | JSON value for config-instance preferences |
 

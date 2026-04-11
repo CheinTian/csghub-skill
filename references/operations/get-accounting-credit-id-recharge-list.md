@@ -1,7 +1,7 @@
 # GET /accounting/credit/{id}/recharge/list
 
 **Resource:** [Accounting](../resources/Accounting.md)
-**List recharges by user uuid and start time and end time**
+**List recharges by user or org uuid and start time and end time**
 **Operation ID:** `get--accounting-credit-{id}-recharge-list`
 
 ## Parameters
@@ -13,6 +13,7 @@
 | `start_time` | query | string | Yes | start_time, format: '2024-06-12 08:27:22' |
 | `end_time` | query | string | Yes | end_time, format: '2024-06-12 17:17:22' |
 | `current_user` | query | string | Yes | current_user |
+| `org_name` | query | string | No | org_name |
 | `per` | query | integer | No | per |
 | `page` | query | integer | No | per page |
 

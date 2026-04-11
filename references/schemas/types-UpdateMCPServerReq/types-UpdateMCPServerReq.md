@@ -8,6 +8,7 @@
 |-------|------|----------|-------------|
 | `build_cmds` | string | No |  |
 | `configuration` | string | No |  |
+| `default_branch` | string | No |  |
 | `description` | string | No | The new description for the repository |
 | `install_deps_cmds` | string | No |  |
 | `launch_cmds` | string | No |  |

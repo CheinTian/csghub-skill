@@ -7,6 +7,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `built_in` | boolean | No | Whether the instance is built-in |
+| `config` | object | No | Per-user instance configuration from user preferences |
 | `content_id` | string | No | Used to specify the unique id of the instance resource |
 | `created_at` | string | No | When the instance was created |
 | `description` | string | No | Instance description |

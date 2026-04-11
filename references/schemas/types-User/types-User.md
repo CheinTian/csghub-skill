@@ -15,6 +15,7 @@
 | `id` | integer | No |  |
 | `labels` | string[] | No |  |
 | `last_login_at` | string | No |  |
+| `namespaces` | types.Namespace[] | No |  |
 | `nickname` | string | No |  |
 | `orgs` | types.Organization[] | No |  |
 | `phone` | string | No |  |

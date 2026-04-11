@@ -4,6 +4,12 @@
 **Post a subscription change for a user**
 **Operation ID:** `post--accounting-subscriptions`
 
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `user_uuid` | query | string | No | user uuid |
+
 ## Request Body
 
 body

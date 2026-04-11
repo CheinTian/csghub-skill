@@ -9,4 +9,5 @@
 | `description` | string | No |  |
 | `metadata` | object | No |  |
 | `name` | string | No |  |
+| `public` | boolean | No |  |
 

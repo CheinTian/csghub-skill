@@ -28,6 +28,7 @@ body
 |--------|-------------|
 | 200 | OK |
 | 400 | Bad request |
+| 404 | User or access token not found |
 | 500 | Internal server error |
 
 **Success Response Schema:**

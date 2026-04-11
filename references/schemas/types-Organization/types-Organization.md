@@ -9,6 +9,7 @@
 | `homepage` | string | No |  |
 | `logo` | string | No |  |
 | `name` | string | No |  |
+| `namespace` | [types.Namespace](types-Namespace.md) | No |  |
 | `org_type` | string | No |  |
 | `path` | string | No | unique name of the organization |
 | `user_id` | integer | No |  |

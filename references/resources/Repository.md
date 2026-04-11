@@ -48,6 +48,7 @@
 | GET | `/{repo_type}/{namespace}/{name}/run/{id}/logs/{instance}` | get deploy instance logs | [View](../operations/get-repo-type-namespace-name-run-id-logs-instance.md) |
 | GET | `/{repo_type}/{namespace}/{name}/run/{id}/status` | get deploy status | [View](../operations/get-repo-type-namespace-name-run-id-status.md) |
 | GET | `/{repo_type}/{namespace}/{name}/serverless/{id}/versions/{commit_id}` | get serverless logs by version (commitid) | [View](../operations/get-repo-type-namespace-name-serverless-id-versions-commit-id.md) |
+| GET | `/{repo_type}/{namespace}/{name}/size/{branch}` | Get the repository size for a specific branch | [View](../operations/get-repo-type-namespace-name-size-branch.md) |
 | POST | `/{repo_type}/{namespace}/{name}/stop_migrate_to_xnet` | Stop single repo migration to Xnet | [View](../operations/post-repo-type-namespace-name-stop-migrate-to-xnet.md) |
 | GET | `/{repo_type}/{namespace}/{name}/tags` | Get the tags of repository | [View](../operations/get-repo-type-namespace-name-tags.md) |
 | POST | `/{repo_type}/{namespace}/{name}/tags/{category}` | update the tags of a certain category | [View](../operations/post-repo-type-namespace-name-tags-category.md) |

@@ -10,9 +10,12 @@
 | `datasets` | string[] | No |  |
 | `model_id` | string | No |  |
 | `model_ids` | string[] | No | for comparison |
+| `node_affinity` | [v1.NodeAffinity](v1-NodeAffinity.md) | No |  |
+| `owner_namespace` | string | No |  |
 | `resource_id` | integer | No |  |
 | `runtime_framework_id` | integer | No | ArgoWorkFlow framework |
 | `share_mode` | boolean | No |  |
 | `task_desc` | string | No |  |
 | `task_name` | string | No |  |
+| `tolerations` | types.Toleration[] | No |  |
 

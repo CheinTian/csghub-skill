@@ -21,11 +21,14 @@
 | `id` | integer | No |  |
 | `image_id` | string | No | for image run task, aka task_type = 1
 running image of cluster, comes from builder or pre-define |
+| `instances` | types.Instance[] | No |  |
 | `max_replica` | integer | No |  |
 | `message` | string | No |  |
 | `min_replica` | integer | No |  |
 | `model_id` | integer | No | model_id to deploy, it's 0 if deploy space |
+| `node_affinity` | [v1.NodeAffinity](v1-NodeAffinity.md) | No |  |
 | `order_detail_id` | integer | No |  |
+| `owner_namespace` | string | No |  |
 | `queue_name` | string | No |  |
 | `reason` | string | No |  |
 | `repo_id` | integer | No | repository_id of model/space/code/dataset |
@@ -39,6 +42,8 @@ running image of cluster, comes from builder or pre-define |
 | `svc_name` | string | No |  |
 | `task` | object | No | text-generation,text-to-image,text-to-speech |
 | `template` | string | No |  |
+| `timeout` | integer | No |  |
+| `tolerations` | types.Toleration[] | No |  |
 | `type` | integer | No | 0-space, 1-inference, 2-finetune, 3-serverless, 4-evaluation, 5-notebook |
 | `updated_at` | string | No |  |
 | `user` | [database.User](database-User.md) | No |  |

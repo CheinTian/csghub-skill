@@ -6,6 +6,7 @@
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
+| `available_status_list` | types.ResourceAvailableStatus[] | No |  |
 | `cluster_id` | string | No |  |
 | `cluster_region` | string | No |  |
 | `id` | integer | No |  |
